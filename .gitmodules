@@ -1,0 +1,3 @@
+[submodule "DMail/Postal"]
+	path = DMail/Postal
+	url = https://github.com/snipsco/Postal.git
