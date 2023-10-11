@@ -98,32 +98,10 @@ void CSVGateway::updateRecord(std::string MangaName, std::string MangaID, int32_
 
 
 bool CSVGateway::doesRecordExist(std::string MangaName) {
-    // File pointer
-    std::fstream fin;
-    // Open an existing file
-    fin.open(docsDirectory(), std::fstream::in);
-
-    std::vector<std::string> row;
-    std::string line, currentLine;
-    std::vector<std::string> results;
-
-    while (fin >> currentLine) {
-        std::stringstream ss(currentLine);
-        std::string str;
-        while (getline(ss, str, ',')) {
-            results.push_back(str);
-        }
-
-        if (results.at(0) == MangaName) {
-            return true;
-        }
-    }
-
-    return false;
+    return MangaName == this->getRecord(MangaName).title;
 }
 
 Manga CSVGateway::getRecord(std::string MangaName) {
-
     for (Manga mg: this->allRecords()) {
         if (mg.title == MangaName) {
             return mg;

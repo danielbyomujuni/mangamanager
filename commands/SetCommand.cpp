@@ -22,6 +22,7 @@ void SetCommand::execute(std::vector<std::string> args) {
     }
 
     if (args.at(0) == "volumes") {
+        //std::cout << args.at(1) << std::endl;
         this->VolumesCMD(args.at(1), args.at(2));
         return;
     }
@@ -33,8 +34,9 @@ void SetCommand::MangaCMD(std::string name, std::string id) {
 }
 
 void SetCommand::VolumesCMD(std::string name, std::string count) {
+    //std::cout << name << std::endl;
     CSVGateway csv;
     Manga rec = csv.getRecord(name);
 
-    csv.setRecord(rec.title, rec.id, stoi(count));
+    csv.setRecord(name, rec.id, stoi(count));
 }

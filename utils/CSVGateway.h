@@ -6,6 +6,7 @@
 #define MANGAMANAGER_CSVGATEWAY_H
 
 #include <string>
+#include <vector>
 
 struct Manga {
     std::string title;

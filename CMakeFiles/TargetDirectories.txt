@@ -1,0 +1,3 @@
+/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles/MangaUpdates.dir
+/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles/edit_cache.dir
+/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles/rebuild_cache.dir

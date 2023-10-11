@@ -17,6 +17,10 @@ void CommandManager::addCommand(std::string alias, BaseCommand *cmd) {
 }
 
 void CommandManager::runCommand(std::string cmd, std::vector<std::string> args) {
+    if (CommandManager::commands[cmd] == NULL) {
+        std::cout << "Invaild: " << cmd << std::endl;
+    }
+
     CommandManager::commands[cmd]->execute(args);
 }
 
