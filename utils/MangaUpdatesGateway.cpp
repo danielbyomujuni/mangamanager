@@ -6,6 +6,10 @@
 #include "Memory.h"
 #include <curl/curl.h>
 #include <iostream>
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
+
+
 
 #define APIURL "https://api.mangaupdates.com/v1/series/"
 
@@ -41,11 +45,24 @@ int MangaUpdatesGateway::getEnglishVolumeCount(std::string MangaId) {
         return -1;
     }
 
-    printf("Size: %lu\n", (unsigned long)chunk.size);
-    printf("Data: %s\n", chunk.memory);
+    //printf("Size: %lu\n", (unsigned long)chunk.size);
+
+    json ex1 = json::parse(chunk.memory);
+
+    for (json pub : ex1.at("publishers")) {
+        if (pub.at("type") == "English") {
+            std::string engNotes = pub.at("notes");
+            std::string volumesStr = engNotes.substr(0, engNotes.find(" "));
+
+            int volumes = stoi(volumesStr);
+            curl_easy_cleanup(curl);
+            free(chunk.memory);
+
+            return volumes;
+        }
+    }
 
     curl_easy_cleanup(curl);
     free(chunk.memory);
-
     return 0;
 }

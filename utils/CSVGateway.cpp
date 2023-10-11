@@ -55,6 +55,7 @@ void CSVGateway::updateRecord(std::string MangaName, std::string MangaID, int32_
 
         row.clear();
         getline(fin, line);
+        //std::cout << line << std::endl;
         std::stringstream s(line);
 
         while (std::getline(s, word, ',')) {
@@ -120,3 +121,65 @@ bool CSVGateway::doesRecordExist(std::string MangaName) {
 
     return false;
 }
+
+Manga CSVGateway::getRecord(std::string MangaName) {
+
+    for (Manga mg: this->allRecords()) {
+        if (mg.title == MangaName) {
+            return mg;
+        }
+    }
+    Manga nullManga;
+    nullManga.title = "undefined";
+    nullManga.id = "undefined";
+    nullManga.volumes = 0;
+
+    return nullManga;
+};
+
+std::vector<Manga> CSVGateway::allRecords() {
+    std::vector<Manga> mangas;
+
+    // File pointer
+    std::fstream fin;
+
+    // Open an existing file
+    fin.open(docsDirectory(), std::fstream::in);
+    // Read the Data from the file
+    // as String Vector
+    std::vector <std::string> row;
+    std::string line, word, temp;
+
+    while (fin >> temp) {
+        row.clear();
+
+        // read an entire row and
+        // store it in a string variable 'line'
+        //std::getline(fin, line);
+        //std::cout << line << std::endl;
+        // used for breaking words
+        std::stringstream s(temp);
+
+        // read every column data of a row and
+        // store it in a string variable, 'word'
+        while (getline(s, word, ',')) {
+
+            // add all the column data
+            // of a row to a vector
+            row.push_back(word);
+        }
+        if (row.size() != 3) {
+            break;
+        }
+
+        Manga newManga;
+        newManga.title = row.at(0);
+        newManga.id = row.at(1);
+        newManga.volumes = stoi(row.at(2));
+
+        mangas.push_back(newManga);
+    }
+
+    //std::cout << mangas.size() << std::endl;
+    return mangas;
+};

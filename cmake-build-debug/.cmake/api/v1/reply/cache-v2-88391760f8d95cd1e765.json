@@ -1102,6 +1102,18 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding nlohmann_json"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/usr/local/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.2(3.2.0)]"
+		},
+		{
 			"name" : "MangaUpdates_BINARY_DIR",
 			"properties" : 
 			[
@@ -1159,7 +1171,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "nlohmann_json_DIR-NOTFOUND"
+			"value" : "/usr/local/share/cmake/nlohmann_json"
 		}
 	],
 	"kind" : "cache",

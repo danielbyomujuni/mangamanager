@@ -5,11 +5,11 @@
 #include <string>
 #include <vector>
 #include "CommandManager.h"
-//#include "commands/LatestCommand.h"
+#include "commands/LatestCommand.h"
 
 void CommandManager::registerCommands() {
     new SetCommand;
-    //new LatestCommand;
+    new LatestCommand;
 }
 
 void CommandManager::addCommand(std::string alias, BaseCommand *cmd) {

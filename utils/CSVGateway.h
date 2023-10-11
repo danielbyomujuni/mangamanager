@@ -7,12 +7,20 @@
 
 #include <string>
 
+struct Manga {
+    std::string title;
+    std::string id;
+    int volumes;
+};
+
 class CSVGateway {
 public:
     void setRecord(std::string MangaName, std::string MangaID, int32_t VolumesOwned);
     bool doesRecordExist(std::string MangaName);
     void appendRecord(std::string MangaName, std::string MangaID, int32_t VolumesOwned);
     void updateRecord(std::string MangaName, std::string MangaID, int32_t VolumesOwned);
+    Manga getRecord(std::string MangaName);
+    std::vector<Manga> allRecords();
 };
 
 

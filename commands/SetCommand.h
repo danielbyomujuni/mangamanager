@@ -10,7 +10,8 @@
 #include "BaseCommand.h"
 
 class SetCommand: public BaseCommand {
-    void Manga(std::string name, std::string id);
+    void MangaCMD(std::string name, std::string id);
+    void VolumesCMD(std::string name, std::string count);
 
 public:
     SetCommand();

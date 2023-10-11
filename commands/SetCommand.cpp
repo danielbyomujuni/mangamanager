@@ -17,12 +17,24 @@ void SetCommand::execute(std::vector<std::string> args) {
         return;
     }
     if (args.at(0) == "manga") {
-        this->Manga(args.at(1), args.at(2));
+        this->MangaCMD(args.at(1), args.at(2));
+        return;
+    }
+
+    if (args.at(0) == "volumes") {
+        this->VolumesCMD(args.at(1), args.at(2));
         return;
     }
 }
 
-void SetCommand::Manga(std::string name, std::string id) {
+void SetCommand::MangaCMD(std::string name, std::string id) {
     CSVGateway gate;
     gate.setRecord(name, id, 0);
+}
+
+void SetCommand::VolumesCMD(std::string name, std::string count) {
+    CSVGateway csv;
+    Manga rec = csv.getRecord(name);
+
+    csv.setRecord(rec.title, rec.id, stoi(count));
 }
