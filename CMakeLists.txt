@@ -7,5 +7,5 @@ find_package(nlohmann_json 3.2.0 REQUIRED)
 set(CMAKE_CXX_FLAGS "-lcurl")
 
 
-add_executable(MangaUpdates main.cpp commands/SetCommand.cpp commands/SetCommand.h commands/BaseCommand.cpp commands/BaseCommand.h CommandManager.cpp CommandManager.h utils/CSVGateway.cpp utils/CSVGateway.h utils/MangaUpdatesGateway.cpp utils/MangaUpdatesGateway.h utils/Memory.cpp utils/Memory.h commands/LatestCommand.cpp commands/LatestCommand.h)
+add_executable(MangaUpdates src/main.cpp src/commands/SetCommand.cpp src/commands/SetCommand.h src/commands/BaseCommand.cpp src/commands/BaseCommand.h src/CommandManager.cpp src/CommandManager.h src/utils/CSVGateway.cpp src/utils/CSVGateway.h src/utils/MangaUpdatesGateway.cpp src/utils/MangaUpdatesGateway.h src/utils/Memory.cpp src/utils/Memory.h src/commands/LatestCommand.cpp src/commands/LatestCommand.h)
 target_link_libraries(MangaUpdates PRIVATE nlohmann_json::nlohmann_json)

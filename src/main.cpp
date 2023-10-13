@@ -3,8 +3,8 @@
 //
 
 #include "CommandManager.h"
-#include "utils/MangaUpdatesGateway.h"
-#include "utils/CSVGateway.h"
+#include "../utils/MangaUpdatesGateway.h"
+#include "../utils/CSVGateway.h"
 
 int main(int argc, char *argv[]) {
 
