@@ -9,14 +9,15 @@
 #include <string>
 #include <iostream>
 
-std::string docsDirectory() {
-    std::string home_dir = getenv("HOME");
-    return home_dir + "/Documents/mangaUpdates.csv";
+#define csvFile "mangaUpdates.csv"
+#define csvTempFile "mangaUpdatesTemp.csv"
+
+CSVGateway::CSVGateway(std::string folder) {
+    this->workingFolder = folder;
 }
 
-std::string docsTempDirectory() {
-    std::string home_dir = getenv("HOME");
-    return home_dir + "/Documents/mangaUpdatesTemp.csv";
+CSVGateway::CSVGateway() {
+    this->workingFolder = std::string(getenv("HOME")) + "/Documents/";
 }
 
 void CSVGateway::setRecord(std::string MangaName, std::string MangaID, int32_t VolumesOwned) {
@@ -33,7 +34,7 @@ void CSVGateway::setRecord(std::string MangaName, std::string MangaID, int32_t V
 void CSVGateway::appendRecord(std::string MangaName, std::string MangaID, int32_t VolumesOwned) {
     // file pointer
     std::fstream fstream;
-    fstream.open(docsDirectory(), std::fstream::out | std::fstream::app);
+    fstream.open(this->workingFolder + csvFile, std::fstream::out | std::fstream::app);
     fstream << MangaName << "," << MangaID << "," << VolumesOwned << std::endl;
 
     fstream.close();
@@ -44,10 +45,10 @@ void CSVGateway::updateRecord(std::string MangaName, std::string MangaID, int32_
     std::fstream fin, fout;
 
     // Open an existing record
-    fin.open(docsDirectory(), std::fstream::in);
+    fin.open(this->workingFolder + csvFile, std::fstream::in);
 
     // Create a new file to store updated data
-    fout.open(docsTempDirectory(), std::fstream::out);
+    fout.open(this->workingFolder + csvTempFile, std::fstream::out);
 
     std::string line, word;
     std::vector<std::string> row;
@@ -90,9 +91,9 @@ void CSVGateway::updateRecord(std::string MangaName, std::string MangaID, int32_
     fout.close();
 
     // removing the existing file
-    std::remove(docsDirectory().c_str());
+    std::remove((this->workingFolder + csvFile).c_str());
     // renaming the updated file with the existing file name
-    std::rename(docsTempDirectory().c_str(), docsDirectory().c_str());
+    std::rename((this->workingFolder + csvTempFile).c_str(), (this->workingFolder + csvFile).c_str());
 
 }
 
@@ -101,7 +102,7 @@ bool CSVGateway::doesRecordExist(std::string MangaName) {
     // File pointer
     std::fstream fin;
     // Open an existing file
-    fin.open(docsDirectory(), std::fstream::in);
+    fin.open(this->workingFolder + csvFile, std::fstream::in);
 
     std::vector<std::string> row;
     std::string line, currentLine;
@@ -144,7 +145,7 @@ std::vector<Manga> CSVGateway::allRecords() {
     std::fstream fin;
 
     // Open an existing file
-    fin.open(docsDirectory(), std::fstream::in);
+    fin.open(this->workingFolder + csvFile, std::fstream::in);
     // Read the Data from the file
     // as String Vector
     std::vector <std::string> row;

@@ -7,6 +7,8 @@
 #include "../CommandManager.h"
 #include "../utils/CSVGateway.h"
 
+#define documents getenv("HOME") + "/Documents/"
+
 SetCommand::SetCommand() {
     CommandManager::instance()->addCommand("set", this);
 }

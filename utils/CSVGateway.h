@@ -14,7 +14,10 @@ struct Manga {
 };
 
 class CSVGateway {
+    std::string workingFolder;
 public:
+    CSVGateway(std::string folder);
+    CSVGateway();
     void setRecord(std::string MangaName, std::string MangaID, int32_t VolumesOwned);
     bool doesRecordExist(std::string MangaName);
     void appendRecord(std::string MangaName, std::string MangaID, int32_t VolumesOwned);
