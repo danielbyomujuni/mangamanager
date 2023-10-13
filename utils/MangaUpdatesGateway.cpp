@@ -49,20 +49,19 @@ int MangaUpdatesGateway::getEnglishVolumeCount(std::string MangaId) {
 
     json ex1 = json::parse(chunk.memory);
 
+    std::vector<int> volumes = {0};
     for (json pub : ex1.at("publishers")) {
         if (pub.at("type") == "English") {
             std::string engNotes = pub.at("notes");
             std::string volumesStr = engNotes.substr(0, engNotes.find(" "));
 
-            int volumes = stoi(volumesStr);
-            curl_easy_cleanup(curl);
-            free(chunk.memory);
-
-            return volumes;
+            volumes.push_back(stoi(volumesStr));
         }
     }
 
     curl_easy_cleanup(curl);
     free(chunk.memory);
-    return 0;
+
+    int max = *std::max_element(volumes.begin(), volumes.end());
+    return max;
 }

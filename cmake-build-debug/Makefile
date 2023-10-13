@@ -273,6 +273,54 @@ utils/CSVGateway.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.s
 .PHONY : utils/CSVGateway.cpp.s
 
+utils/MangaUpdatesGateway.o: utils/MangaUpdatesGateway.cpp.o
+.PHONY : utils/MangaUpdatesGateway.o
+
+# target to build an object file
+utils/MangaUpdatesGateway.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o
+.PHONY : utils/MangaUpdatesGateway.cpp.o
+
+utils/MangaUpdatesGateway.i: utils/MangaUpdatesGateway.cpp.i
+.PHONY : utils/MangaUpdatesGateway.i
+
+# target to preprocess a source file
+utils/MangaUpdatesGateway.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.i
+.PHONY : utils/MangaUpdatesGateway.cpp.i
+
+utils/MangaUpdatesGateway.s: utils/MangaUpdatesGateway.cpp.s
+.PHONY : utils/MangaUpdatesGateway.s
+
+# target to generate assembly for a file
+utils/MangaUpdatesGateway.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.s
+.PHONY : utils/MangaUpdatesGateway.cpp.s
+
+utils/Memory.o: utils/Memory.cpp.o
+.PHONY : utils/Memory.o
+
+# target to build an object file
+utils/Memory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o
+.PHONY : utils/Memory.cpp.o
+
+utils/Memory.i: utils/Memory.cpp.i
+.PHONY : utils/Memory.i
+
+# target to preprocess a source file
+utils/Memory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.i
+.PHONY : utils/Memory.cpp.i
+
+utils/Memory.s: utils/Memory.cpp.s
+.PHONY : utils/Memory.s
+
+# target to generate assembly for a file
+utils/Memory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.s
+.PHONY : utils/Memory.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -300,6 +348,12 @@ help:
 	@echo "... utils/CSVGateway.o"
 	@echo "... utils/CSVGateway.i"
 	@echo "... utils/CSVGateway.s"
+	@echo "... utils/MangaUpdatesGateway.o"
+	@echo "... utils/MangaUpdatesGateway.i"
+	@echo "... utils/MangaUpdatesGateway.s"
+	@echo "... utils/Memory.o"
+	@echo "... utils/Memory.i"
+	@echo "... utils/Memory.s"
 .PHONY : help
 
 

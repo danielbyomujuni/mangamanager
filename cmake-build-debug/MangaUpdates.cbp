@@ -115,6 +115,18 @@
 		<Unit filename="/home/Daniel/Documents/Projects/mangaupdates/utils/CSVGateway.h">
 			<Option target="MangaUpdates"/>
 		</Unit>
+		<Unit filename="/home/Daniel/Documents/Projects/mangaupdates/utils/MangaUpdatesGateway.cpp">
+			<Option target="MangaUpdates"/>
+		</Unit>
+		<Unit filename="/home/Daniel/Documents/Projects/mangaupdates/utils/MangaUpdatesGateway.h">
+			<Option target="MangaUpdates"/>
+		</Unit>
+		<Unit filename="/home/Daniel/Documents/Projects/mangaupdates/utils/Memory.cpp">
+			<Option target="MangaUpdates"/>
+		</Unit>
+		<Unit filename="/home/Daniel/Documents/Projects/mangaupdates/utils/Memory.h">
+			<Option target="MangaUpdates"/>
+		</Unit>
 		<Unit filename="/home/Daniel/Documents/Projects/mangaupdates/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
