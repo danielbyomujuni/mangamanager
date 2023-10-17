@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/Daniel/Documents/Projects/mangaupdates/CommandManager.cpp" "CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o.d"
-  "/home/Daniel/Documents/Projects/mangaupdates/commands/BaseCommand.cpp" "CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o.d"
-  "/home/Daniel/Documents/Projects/mangaupdates/commands/LatestCommand.cpp" "CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o.d"
-  "/home/Daniel/Documents/Projects/mangaupdates/commands/SetCommand.cpp" "CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o.d"
-  "/home/Daniel/Documents/Projects/mangaupdates/main.cpp" "CMakeFiles/MangaUpdates.dir/main.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/main.cpp.o.d"
-  "/home/Daniel/Documents/Projects/mangaupdates/utils/CSVGateway.cpp" "CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o.d"
-  "/home/Daniel/Documents/Projects/mangaupdates/utils/MangaUpdatesGateway.cpp" "CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o.d"
-  "/home/Daniel/Documents/Projects/mangaupdates/utils/Memory.cpp" "CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o.d"
+  "/home/Daniel/Documents/Projects/mangaupdates/src/CommandManager.cpp" "CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o.d"
+  "/home/Daniel/Documents/Projects/mangaupdates/src/commands/BaseCommand.cpp" "CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o.d"
+  "/home/Daniel/Documents/Projects/mangaupdates/src/commands/LatestCommand.cpp" "CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o.d"
+  "/home/Daniel/Documents/Projects/mangaupdates/src/commands/SetCommand.cpp" "CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o.d"
+  "/home/Daniel/Documents/Projects/mangaupdates/src/main.cpp" "CMakeFiles/MangaUpdates.dir/src/main.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/src/main.cpp.o.d"
+  "/home/Daniel/Documents/Projects/mangaupdates/src/utils/CSVGateway.cpp" "CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o.d"
+  "/home/Daniel/Documents/Projects/mangaupdates/src/utils/MangaUpdatesGateway.cpp" "CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o.d"
+  "/home/Daniel/Documents/Projects/mangaupdates/src/utils/Memory.cpp" "CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o" "gcc" "CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

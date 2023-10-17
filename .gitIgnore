@@ -4,3 +4,9 @@ CMakeCache.txt
 Makefile
 .idea
 CMakeFiles/
+Testing/
+_deps/
+.cmake/
+bin/
+cmake-build-debug/
+lib/

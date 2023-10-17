@@ -10,7 +10,7 @@
 
 class MangaUpdatesGateway {
 public:
-    int getEnglishVolumeCount(std::string MangaId);
+    int getEnglishVolumeCount(const std::string MangaId);
 };
 
 

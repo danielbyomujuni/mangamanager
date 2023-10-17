@@ -7,8 +7,8 @@
 
 
 #include <map>
-#include "../commands/BaseCommand.h"
-#include "../commands/SetCommand.h"
+#include "commands/BaseCommand.h"
+#include "commands/SetCommand.h"
 
 class CommandManager {
 private:

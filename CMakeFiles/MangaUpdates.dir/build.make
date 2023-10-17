@@ -69,140 +69,140 @@ include CMakeFiles/MangaUpdates.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MangaUpdates.dir/flags.make
 
-CMakeFiles/MangaUpdates.dir/main.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
-CMakeFiles/MangaUpdates.dir/main.cpp.o: main.cpp
-CMakeFiles/MangaUpdates.dir/main.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MangaUpdates.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/main.cpp.o -MF CMakeFiles/MangaUpdates.dir/main.cpp.o.d -o CMakeFiles/MangaUpdates.dir/main.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/main.cpp
+CMakeFiles/MangaUpdates.dir/src/main.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
+CMakeFiles/MangaUpdates.dir/src/main.cpp.o: src/main.cpp
+CMakeFiles/MangaUpdates.dir/src/main.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MangaUpdates.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/src/main.cpp.o -MF CMakeFiles/MangaUpdates.dir/src/main.cpp.o.d -o CMakeFiles/MangaUpdates.dir/src/main.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/src/main.cpp
 
-CMakeFiles/MangaUpdates.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/main.cpp > CMakeFiles/MangaUpdates.dir/main.cpp.i
+CMakeFiles/MangaUpdates.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/src/main.cpp > CMakeFiles/MangaUpdates.dir/src/main.cpp.i
 
-CMakeFiles/MangaUpdates.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/main.cpp -o CMakeFiles/MangaUpdates.dir/main.cpp.s
+CMakeFiles/MangaUpdates.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/src/main.cpp -o CMakeFiles/MangaUpdates.dir/src/main.cpp.s
 
-CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
-CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o: commands/SetCommand.cpp
-CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o -MF CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o.d -o CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/commands/SetCommand.cpp
+CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
+CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o: src/commands/SetCommand.cpp
+CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o -MF CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o.d -o CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/src/commands/SetCommand.cpp
 
-CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/commands/SetCommand.cpp > CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.i
+CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/src/commands/SetCommand.cpp > CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.i
 
-CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/commands/SetCommand.cpp -o CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.s
+CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/src/commands/SetCommand.cpp -o CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.s
 
-CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
-CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o: commands/BaseCommand.cpp
-CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o -MF CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o.d -o CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/commands/BaseCommand.cpp
+CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
+CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o: src/commands/BaseCommand.cpp
+CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o -MF CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o.d -o CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/src/commands/BaseCommand.cpp
 
-CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/commands/BaseCommand.cpp > CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.i
+CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/src/commands/BaseCommand.cpp > CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.i
 
-CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/commands/BaseCommand.cpp -o CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.s
+CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/src/commands/BaseCommand.cpp -o CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.s
 
-CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
-CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o: CommandManager.cpp
-CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o -MF CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o.d -o CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/CommandManager.cpp
+CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
+CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o: src/CommandManager.cpp
+CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o -MF CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o.d -o CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/src/CommandManager.cpp
 
-CMakeFiles/MangaUpdates.dir/CommandManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/CommandManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/CommandManager.cpp > CMakeFiles/MangaUpdates.dir/CommandManager.cpp.i
+CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/src/CommandManager.cpp > CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.i
 
-CMakeFiles/MangaUpdates.dir/CommandManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/CommandManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/CommandManager.cpp -o CMakeFiles/MangaUpdates.dir/CommandManager.cpp.s
+CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/src/CommandManager.cpp -o CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.s
 
-CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
-CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o: utils/CSVGateway.cpp
-CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o -MF CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o.d -o CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/utils/CSVGateway.cpp
+CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
+CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o: src/utils/CSVGateway.cpp
+CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o -MF CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o.d -o CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/src/utils/CSVGateway.cpp
 
-CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/utils/CSVGateway.cpp > CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.i
+CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/src/utils/CSVGateway.cpp > CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.i
 
-CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/utils/CSVGateway.cpp -o CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.s
+CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/src/utils/CSVGateway.cpp -o CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.s
 
-CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
-CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o: utils/MangaUpdatesGateway.cpp
-CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o -MF CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o.d -o CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/utils/MangaUpdatesGateway.cpp
+CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
+CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o: src/utils/MangaUpdatesGateway.cpp
+CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o -MF CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o.d -o CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/src/utils/MangaUpdatesGateway.cpp
 
-CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/utils/MangaUpdatesGateway.cpp > CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.i
+CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/src/utils/MangaUpdatesGateway.cpp > CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.i
 
-CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/utils/MangaUpdatesGateway.cpp -o CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.s
+CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/src/utils/MangaUpdatesGateway.cpp -o CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.s
 
-CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
-CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o: utils/Memory.cpp
-CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o -MF CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o.d -o CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/utils/Memory.cpp
+CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
+CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o: src/utils/Memory.cpp
+CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o -MF CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o.d -o CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/src/utils/Memory.cpp
 
-CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/utils/Memory.cpp > CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.i
+CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/src/utils/Memory.cpp > CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.i
 
-CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/utils/Memory.cpp -o CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.s
+CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/src/utils/Memory.cpp -o CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.s
 
-CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
-CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o: commands/LatestCommand.cpp
-CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o -MF CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o.d -o CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/commands/LatestCommand.cpp
+CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o: CMakeFiles/MangaUpdates.dir/flags.make
+CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o: src/commands/LatestCommand.cpp
+CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o: CMakeFiles/MangaUpdates.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o -MF CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o.d -o CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o -c /home/Daniel/Documents/Projects/mangaupdates/src/commands/LatestCommand.cpp
 
-CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/commands/LatestCommand.cpp > CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.i
+CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Daniel/Documents/Projects/mangaupdates/src/commands/LatestCommand.cpp > CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.i
 
-CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/commands/LatestCommand.cpp -o CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.s
+CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Daniel/Documents/Projects/mangaupdates/src/commands/LatestCommand.cpp -o CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.s
 
 # Object files for target MangaUpdates
 MangaUpdates_OBJECTS = \
-"CMakeFiles/MangaUpdates.dir/main.cpp.o" \
-"CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o" \
-"CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o" \
-"CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o" \
-"CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o" \
-"CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o" \
-"CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o" \
-"CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o"
+"CMakeFiles/MangaUpdates.dir/src/main.cpp.o" \
+"CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o" \
+"CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o" \
+"CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o" \
+"CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o" \
+"CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o" \
+"CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o" \
+"CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o"
 
 # External object files for target MangaUpdates
 MangaUpdates_EXTERNAL_OBJECTS =
 
-MangaUpdates: CMakeFiles/MangaUpdates.dir/main.cpp.o
-MangaUpdates: CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o
-MangaUpdates: CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o
-MangaUpdates: CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o
-MangaUpdates: CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o
-MangaUpdates: CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o
-MangaUpdates: CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o
-MangaUpdates: CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o
+MangaUpdates: CMakeFiles/MangaUpdates.dir/src/main.cpp.o
+MangaUpdates: CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o
+MangaUpdates: CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o
+MangaUpdates: CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o
+MangaUpdates: CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o
+MangaUpdates: CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o
+MangaUpdates: CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o
+MangaUpdates: CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o
 MangaUpdates: CMakeFiles/MangaUpdates.dir/build.make
 MangaUpdates: CMakeFiles/MangaUpdates.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/Daniel/Documents/Projects/mangaupdates/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable MangaUpdates"

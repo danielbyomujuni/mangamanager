@@ -65,10 +65,20 @@ CMAKE_BINARY_DIR = /home/Daniel/Documents/Projects/mangaupdates
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -129,197 +184,307 @@ MangaUpdates/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/build
 .PHONY : MangaUpdates/fast
 
-CommandManager.o: CommandManager.cpp.o
-.PHONY : CommandManager.o
+#=============================================================================
+# Target rules for targets named MangaUpdatesTest
+
+# Build rule for target.
+MangaUpdatesTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MangaUpdatesTest
+.PHONY : MangaUpdatesTest
+
+# fast build rule for target.
+MangaUpdatesTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/build
+.PHONY : MangaUpdatesTest/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+src/CommandManager.o: src/CommandManager.cpp.o
+.PHONY : src/CommandManager.o
 
 # target to build an object file
-CommandManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/CommandManager.cpp.o
-.PHONY : CommandManager.cpp.o
+src/CommandManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/CommandManager.cpp.o
+.PHONY : src/CommandManager.cpp.o
 
-CommandManager.i: CommandManager.cpp.i
-.PHONY : CommandManager.i
+src/CommandManager.i: src/CommandManager.cpp.i
+.PHONY : src/CommandManager.i
 
 # target to preprocess a source file
-CommandManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/CommandManager.cpp.i
-.PHONY : CommandManager.cpp.i
+src/CommandManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/CommandManager.cpp.i
+.PHONY : src/CommandManager.cpp.i
 
-CommandManager.s: CommandManager.cpp.s
-.PHONY : CommandManager.s
+src/CommandManager.s: src/CommandManager.cpp.s
+.PHONY : src/CommandManager.s
 
 # target to generate assembly for a file
-CommandManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/CommandManager.cpp.s
-.PHONY : CommandManager.cpp.s
+src/CommandManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/CommandManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/CommandManager.cpp.s
+.PHONY : src/CommandManager.cpp.s
 
-commands/BaseCommand.o: commands/BaseCommand.cpp.o
-.PHONY : commands/BaseCommand.o
+src/commands/BaseCommand.o: src/commands/BaseCommand.cpp.o
+.PHONY : src/commands/BaseCommand.o
 
 # target to build an object file
-commands/BaseCommand.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.o
-.PHONY : commands/BaseCommand.cpp.o
+src/commands/BaseCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/commands/BaseCommand.cpp.o
+.PHONY : src/commands/BaseCommand.cpp.o
 
-commands/BaseCommand.i: commands/BaseCommand.cpp.i
-.PHONY : commands/BaseCommand.i
+src/commands/BaseCommand.i: src/commands/BaseCommand.cpp.i
+.PHONY : src/commands/BaseCommand.i
 
 # target to preprocess a source file
-commands/BaseCommand.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.i
-.PHONY : commands/BaseCommand.cpp.i
+src/commands/BaseCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/commands/BaseCommand.cpp.i
+.PHONY : src/commands/BaseCommand.cpp.i
 
-commands/BaseCommand.s: commands/BaseCommand.cpp.s
-.PHONY : commands/BaseCommand.s
+src/commands/BaseCommand.s: src/commands/BaseCommand.cpp.s
+.PHONY : src/commands/BaseCommand.s
 
 # target to generate assembly for a file
-commands/BaseCommand.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/commands/BaseCommand.cpp.s
-.PHONY : commands/BaseCommand.cpp.s
+src/commands/BaseCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/commands/BaseCommand.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/commands/BaseCommand.cpp.s
+.PHONY : src/commands/BaseCommand.cpp.s
 
-commands/LatestCommand.o: commands/LatestCommand.cpp.o
-.PHONY : commands/LatestCommand.o
+src/commands/LatestCommand.o: src/commands/LatestCommand.cpp.o
+.PHONY : src/commands/LatestCommand.o
 
 # target to build an object file
-commands/LatestCommand.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.o
-.PHONY : commands/LatestCommand.cpp.o
+src/commands/LatestCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/commands/LatestCommand.cpp.o
+.PHONY : src/commands/LatestCommand.cpp.o
 
-commands/LatestCommand.i: commands/LatestCommand.cpp.i
-.PHONY : commands/LatestCommand.i
+src/commands/LatestCommand.i: src/commands/LatestCommand.cpp.i
+.PHONY : src/commands/LatestCommand.i
 
 # target to preprocess a source file
-commands/LatestCommand.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.i
-.PHONY : commands/LatestCommand.cpp.i
+src/commands/LatestCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/commands/LatestCommand.cpp.i
+.PHONY : src/commands/LatestCommand.cpp.i
 
-commands/LatestCommand.s: commands/LatestCommand.cpp.s
-.PHONY : commands/LatestCommand.s
+src/commands/LatestCommand.s: src/commands/LatestCommand.cpp.s
+.PHONY : src/commands/LatestCommand.s
 
 # target to generate assembly for a file
-commands/LatestCommand.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/commands/LatestCommand.cpp.s
-.PHONY : commands/LatestCommand.cpp.s
+src/commands/LatestCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/commands/LatestCommand.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/commands/LatestCommand.cpp.s
+.PHONY : src/commands/LatestCommand.cpp.s
 
-commands/SetCommand.o: commands/SetCommand.cpp.o
-.PHONY : commands/SetCommand.o
+src/commands/SetCommand.o: src/commands/SetCommand.cpp.o
+.PHONY : src/commands/SetCommand.o
 
 # target to build an object file
-commands/SetCommand.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.o
-.PHONY : commands/SetCommand.cpp.o
+src/commands/SetCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/commands/SetCommand.cpp.o
+.PHONY : src/commands/SetCommand.cpp.o
 
-commands/SetCommand.i: commands/SetCommand.cpp.i
-.PHONY : commands/SetCommand.i
+src/commands/SetCommand.i: src/commands/SetCommand.cpp.i
+.PHONY : src/commands/SetCommand.i
 
 # target to preprocess a source file
-commands/SetCommand.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.i
-.PHONY : commands/SetCommand.cpp.i
+src/commands/SetCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/commands/SetCommand.cpp.i
+.PHONY : src/commands/SetCommand.cpp.i
 
-commands/SetCommand.s: commands/SetCommand.cpp.s
-.PHONY : commands/SetCommand.s
+src/commands/SetCommand.s: src/commands/SetCommand.cpp.s
+.PHONY : src/commands/SetCommand.s
 
 # target to generate assembly for a file
-commands/SetCommand.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/commands/SetCommand.cpp.s
-.PHONY : commands/SetCommand.cpp.s
+src/commands/SetCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/commands/SetCommand.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/commands/SetCommand.cpp.s
+.PHONY : src/commands/SetCommand.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-utils/CSVGateway.o: utils/CSVGateway.cpp.o
-.PHONY : utils/CSVGateway.o
+src/utils/CSVGateway.o: src/utils/CSVGateway.cpp.o
+.PHONY : src/utils/CSVGateway.o
 
 # target to build an object file
-utils/CSVGateway.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.o
-.PHONY : utils/CSVGateway.cpp.o
+src/utils/CSVGateway.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/utils/CSVGateway.cpp.o
+.PHONY : src/utils/CSVGateway.cpp.o
 
-utils/CSVGateway.i: utils/CSVGateway.cpp.i
-.PHONY : utils/CSVGateway.i
+src/utils/CSVGateway.i: src/utils/CSVGateway.cpp.i
+.PHONY : src/utils/CSVGateway.i
 
 # target to preprocess a source file
-utils/CSVGateway.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.i
-.PHONY : utils/CSVGateway.cpp.i
+src/utils/CSVGateway.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/utils/CSVGateway.cpp.i
+.PHONY : src/utils/CSVGateway.cpp.i
 
-utils/CSVGateway.s: utils/CSVGateway.cpp.s
-.PHONY : utils/CSVGateway.s
+src/utils/CSVGateway.s: src/utils/CSVGateway.cpp.s
+.PHONY : src/utils/CSVGateway.s
 
 # target to generate assembly for a file
-utils/CSVGateway.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/CSVGateway.cpp.s
-.PHONY : utils/CSVGateway.cpp.s
+src/utils/CSVGateway.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/utils/CSVGateway.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/utils/CSVGateway.cpp.s
+.PHONY : src/utils/CSVGateway.cpp.s
 
-utils/MangaUpdatesGateway.o: utils/MangaUpdatesGateway.cpp.o
-.PHONY : utils/MangaUpdatesGateway.o
+src/utils/MangaUpdatesGateway.o: src/utils/MangaUpdatesGateway.cpp.o
+.PHONY : src/utils/MangaUpdatesGateway.o
 
 # target to build an object file
-utils/MangaUpdatesGateway.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.o
-.PHONY : utils/MangaUpdatesGateway.cpp.o
+src/utils/MangaUpdatesGateway.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/utils/MangaUpdatesGateway.cpp.o
+.PHONY : src/utils/MangaUpdatesGateway.cpp.o
 
-utils/MangaUpdatesGateway.i: utils/MangaUpdatesGateway.cpp.i
-.PHONY : utils/MangaUpdatesGateway.i
+src/utils/MangaUpdatesGateway.i: src/utils/MangaUpdatesGateway.cpp.i
+.PHONY : src/utils/MangaUpdatesGateway.i
 
 # target to preprocess a source file
-utils/MangaUpdatesGateway.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.i
-.PHONY : utils/MangaUpdatesGateway.cpp.i
+src/utils/MangaUpdatesGateway.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/utils/MangaUpdatesGateway.cpp.i
+.PHONY : src/utils/MangaUpdatesGateway.cpp.i
 
-utils/MangaUpdatesGateway.s: utils/MangaUpdatesGateway.cpp.s
-.PHONY : utils/MangaUpdatesGateway.s
+src/utils/MangaUpdatesGateway.s: src/utils/MangaUpdatesGateway.cpp.s
+.PHONY : src/utils/MangaUpdatesGateway.s
 
 # target to generate assembly for a file
-utils/MangaUpdatesGateway.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/MangaUpdatesGateway.cpp.s
-.PHONY : utils/MangaUpdatesGateway.cpp.s
+src/utils/MangaUpdatesGateway.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/utils/MangaUpdatesGateway.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/utils/MangaUpdatesGateway.cpp.s
+.PHONY : src/utils/MangaUpdatesGateway.cpp.s
 
-utils/Memory.o: utils/Memory.cpp.o
-.PHONY : utils/Memory.o
+src/utils/Memory.o: src/utils/Memory.cpp.o
+.PHONY : src/utils/Memory.o
 
 # target to build an object file
-utils/Memory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.o
-.PHONY : utils/Memory.cpp.o
+src/utils/Memory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/utils/Memory.cpp.o
+.PHONY : src/utils/Memory.cpp.o
 
-utils/Memory.i: utils/Memory.cpp.i
-.PHONY : utils/Memory.i
+src/utils/Memory.i: src/utils/Memory.cpp.i
+.PHONY : src/utils/Memory.i
 
 # target to preprocess a source file
-utils/Memory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.i
-.PHONY : utils/Memory.cpp.i
+src/utils/Memory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/utils/Memory.cpp.i
+.PHONY : src/utils/Memory.cpp.i
 
-utils/Memory.s: utils/Memory.cpp.s
-.PHONY : utils/Memory.s
+src/utils/Memory.s: src/utils/Memory.cpp.s
+.PHONY : src/utils/Memory.s
 
 # target to generate assembly for a file
-utils/Memory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/utils/Memory.cpp.s
-.PHONY : utils/Memory.cpp.s
+src/utils/Memory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdates.dir/build.make CMakeFiles/MangaUpdates.dir/src/utils/Memory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/src/utils/Memory.cpp.s
+.PHONY : src/utils/Memory.cpp.s
+
+test/utils/MangaUpdatesGatewayTest.o: test/utils/MangaUpdatesGatewayTest.cpp.o
+.PHONY : test/utils/MangaUpdatesGatewayTest.o
+
+# target to build an object file
+test/utils/MangaUpdatesGatewayTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/test/utils/MangaUpdatesGatewayTest.cpp.o
+.PHONY : test/utils/MangaUpdatesGatewayTest.cpp.o
+
+test/utils/MangaUpdatesGatewayTest.i: test/utils/MangaUpdatesGatewayTest.cpp.i
+.PHONY : test/utils/MangaUpdatesGatewayTest.i
+
+# target to preprocess a source file
+test/utils/MangaUpdatesGatewayTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/test/utils/MangaUpdatesGatewayTest.cpp.i
+.PHONY : test/utils/MangaUpdatesGatewayTest.cpp.i
+
+test/utils/MangaUpdatesGatewayTest.s: test/utils/MangaUpdatesGatewayTest.cpp.s
+.PHONY : test/utils/MangaUpdatesGatewayTest.s
+
+# target to generate assembly for a file
+test/utils/MangaUpdatesGatewayTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MangaUpdatesTest.dir/build.make CMakeFiles/MangaUpdatesTest.dir/test/utils/MangaUpdatesGatewayTest.cpp.s
+.PHONY : test/utils/MangaUpdatesGatewayTest.cpp.s
 
 # Help Target
 help:
@@ -328,32 +493,45 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... MangaUpdates"
-	@echo "... CommandManager.o"
-	@echo "... CommandManager.i"
-	@echo "... CommandManager.s"
-	@echo "... commands/BaseCommand.o"
-	@echo "... commands/BaseCommand.i"
-	@echo "... commands/BaseCommand.s"
-	@echo "... commands/LatestCommand.o"
-	@echo "... commands/LatestCommand.i"
-	@echo "... commands/LatestCommand.s"
-	@echo "... commands/SetCommand.o"
-	@echo "... commands/SetCommand.i"
-	@echo "... commands/SetCommand.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... utils/CSVGateway.o"
-	@echo "... utils/CSVGateway.i"
-	@echo "... utils/CSVGateway.s"
-	@echo "... utils/MangaUpdatesGateway.o"
-	@echo "... utils/MangaUpdatesGateway.i"
-	@echo "... utils/MangaUpdatesGateway.s"
-	@echo "... utils/Memory.o"
-	@echo "... utils/Memory.i"
-	@echo "... utils/Memory.s"
+	@echo "... MangaUpdatesTest"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... src/CommandManager.o"
+	@echo "... src/CommandManager.i"
+	@echo "... src/CommandManager.s"
+	@echo "... src/commands/BaseCommand.o"
+	@echo "... src/commands/BaseCommand.i"
+	@echo "... src/commands/BaseCommand.s"
+	@echo "... src/commands/LatestCommand.o"
+	@echo "... src/commands/LatestCommand.i"
+	@echo "... src/commands/LatestCommand.s"
+	@echo "... src/commands/SetCommand.o"
+	@echo "... src/commands/SetCommand.i"
+	@echo "... src/commands/SetCommand.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/utils/CSVGateway.o"
+	@echo "... src/utils/CSVGateway.i"
+	@echo "... src/utils/CSVGateway.s"
+	@echo "... src/utils/MangaUpdatesGateway.o"
+	@echo "... src/utils/MangaUpdatesGateway.i"
+	@echo "... src/utils/MangaUpdatesGateway.s"
+	@echo "... src/utils/Memory.o"
+	@echo "... src/utils/Memory.i"
+	@echo "... src/utils/Memory.s"
+	@echo "... test/utils/MangaUpdatesGatewayTest.o"
+	@echo "... test/utils/MangaUpdatesGatewayTest.i"
+	@echo "... test/utils/MangaUpdatesGatewayTest.s"
 .PHONY : help
 
 

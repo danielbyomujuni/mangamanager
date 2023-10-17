@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS = -lcurl
+CXX_FLAGS = -lcurl -g -fdiagnostics-color=always
 

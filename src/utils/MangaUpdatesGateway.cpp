@@ -17,10 +17,9 @@ struct mangaInfo {
     int englishVol;
 };
 
-mangaInfo getCurlResult(void *contents, size_t size, size_t nmemb, void *userp) {
-}
+mangaInfo getCurlResult(void *contents, size_t size, size_t nmemb, void *userp) {}
 
-int MangaUpdatesGateway::getEnglishVolumeCount(std::string MangaId) {
+int MangaUpdatesGateway::getEnglishVolumeCount(const std::string MangaId) {
     CURL *curl;
 
     curl = curl_easy_init();
