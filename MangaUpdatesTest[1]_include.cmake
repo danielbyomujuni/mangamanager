@@ -1,5 +1,0 @@
-if(EXISTS "/home/Daniel/Documents/Projects/mangaupdates/MangaUpdatesTest[1]_tests.cmake")
-  include("/home/Daniel/Documents/Projects/mangaupdates/MangaUpdatesTest[1]_tests.cmake")
-else()
-  add_test(MangaUpdatesTest_NOT_BUILT MangaUpdatesTest_NOT_BUILT)
-endif()
