@@ -9,7 +9,7 @@
 #define WorkingDirectory std::string("../test/workingDir/")
 
 TEST(CSVGatewayTest, TestSetRecord) {
-    CSVGateway gate(WorkingDirectory + "TestSetRecord_");
+    CSVGateway gate(WorkingDirectory + "TestCSVGateway_");
 
     gate.setRecord("TestName","TestID",32);
 
@@ -22,7 +22,7 @@ TEST(CSVGatewayTest, TestSetRecord) {
 }
 
 TEST(CSVGatewayTest, TestRecordExists) {
-    CSVGateway gate(WorkingDirectory + "TestRecordExists_");
+    CSVGateway gate(WorkingDirectory + "TestCSVGateway_");
 
     gate.setRecord("TestName","TestID",32);
 
@@ -32,9 +32,30 @@ TEST(CSVGatewayTest, TestRecordExists) {
 }
 
 TEST(CSVGatewayTest, TestRecordDoesNotExists) {
-    CSVGateway gate(WorkingDirectory + "TestRecordExists_");
+    CSVGateway gate(WorkingDirectory + "TestCSVGateway_");
 
     EXPECT_FALSE(gate.doesRecordExist("TestName"));
+    cleanup cleanUp;
+    cleanUp.clean();
+}
+
+TEST(CSVGatewayTest, TestAppendRecord) {
+    CSVGateway gate(WorkingDirectory + "TestCSVGateway_");
+
+    gate.appendRecord("TestName", "TestID", 0);
+    gate.appendRecord("TestName", "TestID", 0);
+    EXPECT_EQ(2, gate.allRecords().size());
+    cleanup cleanUp;
+    cleanUp.clean();
+}
+
+TEST(CSVGatewayTest, TestUpdateRecord) {
+    CSVGateway gate(WorkingDirectory + "TestCSVGateway_");
+
+    gate.appendRecord("TestName", "TestID", 0);
+    gate.updateRecord("TestName", "TestID", 4);
+    EXPECT_EQ(1, gate.allRecords().size());
+    EXPECT_EQ(4, gate.getRecord("TestName").volumes);
     cleanup cleanUp;
     cleanUp.clean();
 }
