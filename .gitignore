@@ -5,3 +5,4 @@
 !/install.sh
 !/.gitignore
 !/README.md
+/test/workingDir/*
