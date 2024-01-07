@@ -3,6 +3,7 @@
 !/src
 !/test
 !/install.sh
+!/PKGBUILD
 !/.gitignore
 !/README.md
 /test/workingDir/*
