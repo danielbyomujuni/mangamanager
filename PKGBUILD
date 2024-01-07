@@ -12,7 +12,7 @@ makedepends=('nlohmann-json' 'curl' 'git')
 checkdepends=()
 optdepends=()
 provides=('package')
-source=('mangamanager::git://github.com/danielbyomujuni/mangamanager.git')
+source=('git+https://github.com/danielbyomujuni/mangamanager.git')
 md5sums=('SKIP')
 
 
@@ -24,9 +24,9 @@ pkgver() {
 build() {
     cd "$pkgname"
     cmake -S ./  -B .build/
-    cmake --build .build/
+    cmake --build .build/ --target mangamanager
 }
-
+rm
 package() {
     cd "$pkgname"
     cd ".build"
