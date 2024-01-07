@@ -1,6 +1,6 @@
 # Maintainer: Daniel Byomujuni <danielbyomujuni@gmail.com>
 pkgname='mangamanager'
-pkgver=1.0.0
+pkgver=r19.3bf8c50
 pkgrel=1
 pkgdesc="A Command line CLI for managing your manga collection"
 arch=('x86_64')
@@ -26,7 +26,7 @@ build() {
     cmake -S ./  -B .build/
     cmake --build .build/ --target mangamanager
 }
-rm
+
 package() {
     cd "$pkgname"
     cd ".build"
