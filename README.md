@@ -35,3 +35,4 @@ Manual
             -Wno-dev
     cmake --build .build
     cmake --install .build
+```

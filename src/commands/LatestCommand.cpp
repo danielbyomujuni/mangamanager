@@ -18,21 +18,27 @@ LatestCommand::LatestCommand() {
 
 void LatestCommand::execute(std::vector<std::string> args) {
     CSVGateway csv;
-    MangaUpdatesGateway gate;
+    //MangaUpdatesGateway gate;
     std::vector<Manga> mangas = csv.allRecords();
 
+    //Printing The Header//
 
-    printf("%-30s | %-15s | %-13s | %-16s", "Title", "Id", "Volumes Owned", "Volumes Released \n");
+    //printf("%-30s | %-15s | %-13s | %-16s", "Title", "Id", "Volumes Owned", "Volumes Released \n"); //Header with Release amounts
+    printf("%-30s | %-15s | %-13s", "Title", "Id", "Volumes Owned\n");
 
-    for (int i = 0; i < 30+3+15+3+13+3+16; i++) {
+    //for (int i = 0; i < 30+3+15+3+13+3+16; i++) { //Header with Release amounts
+    for (int i = 0; i < 30+3+15+3+13; i++) {
         std::cout << "-";
     }
+
     std::cout << std::endl;
     for (Manga mg : mangas) {
         printf("%-30s | %-15s ",
                mg.title.c_str(),
                mg.id.c_str());
-        int released = gate.getEnglishVolumeCount(mg.id);
+
+
+        /*int released = gate.getEnglishVolumeCount(mg.id);
         if (mg.volumes < released) {
             std::cout << NOT_UP_TO_DATE;
         } else {
@@ -40,8 +46,10 @@ void LatestCommand::execute(std::vector<std::string> args) {
         }
         printf("| %-13d | %-16d \n",
                mg.volumes,
-               gate.getEnglishVolumeCount(mg.id));
-        std::cout << DEFAULT;
+               gate.getEnglishVolumeCount(mg.id));*/
+
+        printf("| %-13d\n", mg.volumes);
+        //std::cout << DEFAULT;
     }
 
 }

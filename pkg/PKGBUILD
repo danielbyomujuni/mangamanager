@@ -1,6 +1,6 @@
 # Maintainer: Daniel Byomujuni <danielbyomujuni@gmail.com>
 pkgname='mangamanager'
-pkgver=r24.160047f
+pkgver=r26.c1fd26c
 pkgrel=1
 pkgdesc="A Command line CLI for managing your manga collection"
 arch=('x86_64')
