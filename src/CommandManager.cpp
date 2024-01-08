@@ -20,7 +20,7 @@ void CommandManager::runCommand(std::string cmd, std::vector<std::string> args) 
     if (CommandManager::commands[cmd] == NULL) {
         printf("mangamanager: unknown command: %s", cmd.c_str());
         printf("Try 'mangamanager --help' for more information");
-        exit(0)
+        exit(0);
     }
     CommandManager::commands[cmd]->execute(args);
 }
