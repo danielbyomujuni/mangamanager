@@ -13,7 +13,7 @@
 #define DEFAULT "\033[39m"
 
 LatestCommand::LatestCommand() {
-    CommandManager::instance()->addCommand("latest", this);
+    CommandManager::instance()->addCommand("collection", this);
 }
 
 void LatestCommand::execute(std::vector<std::string> args) {
