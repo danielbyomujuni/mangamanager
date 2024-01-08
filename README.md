@@ -13,18 +13,25 @@ This is a Simple Command line Utility For Unix System made to help keep track of
 
 ## Installation
 
-You will need to install some make Depenencies
+You will need to install some make Dependencies
 
-All the install.sh file does is build the project from the source code
-the moves to file to /bin Directory
-
+Automatic
 ```bash
-  #Install Depenencies (Arch Linux)
-  yay -S cmake curl nlohmann-json
-
-  #Clone and Install
-  git clone https://gitlab.danielsworkbench.com/DanielB/mangaupdates.git
-  cd mangaupdates
-  sh ./install.sh
+  #Clone and Install the latest stable github release
+  git clone https://github.com/danielbyomujuni/mangamanager.git
+  yay -Bi mangaupdates/pkg
 ```
+
+Manual
+```bash
+    #Install Dependencies (Arch Linux)
+    yay -S cmake curl nlohmann-json
     
+    git clone https://github.com/danielbyomujuni/mangamanager.git
+    cd mangamanager
+    cmake -B .build \
+            -DCMAKE_BUILD_TYPE='Release' \
+            -DCMAKE_INSTALL_PREFIX='/usr' \
+            -Wno-dev
+    cmake --build .build
+    cmake --install .build
