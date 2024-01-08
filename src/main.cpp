@@ -9,8 +9,8 @@
 int main(int argc, char *argv[]) {
 
     if (argc <= 1) {
-        printf("mangamanager: missing operand");
-        printf("Try 'mangamanager --help' for more information");
+        printf("mangamanager: missing operand\n");
+        printf("Try 'mangamanager --help' for more information\n");
         return 0;
     }
 

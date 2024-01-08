@@ -18,8 +18,8 @@ void CommandManager::addCommand(std::string alias, BaseCommand *cmd) {
 
 void CommandManager::runCommand(std::string cmd, std::vector<std::string> args) {
     if (CommandManager::commands[cmd] == NULL) {
-        printf("mangamanager: unknown command: %s", cmd.c_str());
-        printf("Try 'mangamanager --help' for more information");
+        printf("mangamanager: unknown command: %s\n", cmd.c_str());
+        printf("Try 'mangamanager --help' for more information\n");
         exit(0);
     }
     CommandManager::commands[cmd]->execute(args);
