@@ -30,6 +30,5 @@ build() {
 }
 
 package() {
-    #ls "$srcdir/.build"
-    cd .install -Dm755 -t "$pkgdir/usr/bin" "$srcdir/.build/mangamanager"
+    DESTDIR="$pkgdir" cmake --install "$srcdir/.build"
 }
