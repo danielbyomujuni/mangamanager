@@ -1,0 +1,35 @@
+# Maintainer: Daniel Byomujuni <danielbyomujuni@gmail.com>
+pkgname='mangamanager'
+pkgver=r21.6612dd0
+pkgrel=1
+pkgdesc="A Command line CLI for managing your manga collection"
+arch=('x86_64')
+url="https://github.com/danielbyomujuni/MangaUpdates"
+license=('GPL')
+groups=()
+depends=()
+makedepends=('nlohmann-json' 'curl' 'git')
+checkdepends=()
+optdepends=()
+provides=('package')
+source=('git+https://github.com/danielbyomujuni/mangamanager.git')
+md5sums=('SKIP')
+
+
+pkgver() {
+    cd "$pkgname"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+    cmake -B .build -S "$pkgname" \
+            -DCMAKE_BUILD_TYPE='Release' \
+            -DCMAKE_INSTALL_PREFIX='/usr' \
+            -Wno-dev
+    cmake --build .build
+}
+
+package() {
+    #ls "$srcdir/.build"
+    cd .install -Dm755 -t "$pkgdir/usr/bin" "$srcdir/.build/mangamanager"
+}

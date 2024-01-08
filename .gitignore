@@ -3,7 +3,10 @@
 !/src
 !/test
 !/install.sh
+!/pkg
+/pkg/*
 !/pkg/PKGBUILD
 !/.gitignore
 !/README.md
 /test/workingDir/*
+/.idea
