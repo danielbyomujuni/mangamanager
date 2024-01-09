@@ -160,3 +160,52 @@ TEST(VolumeRangeTest, addBasicVolArraySizeDifSwap) {
     EXPECT_EQ(arr2[4], 0);
     EXPECT_EQ(arr2[5], 1);
 }
+
+TEST(VolumeRangeTest, subBasicVolArray) {
+    int arrlen = 4;
+    int *arr1 = new int[] {0,1,1,0};
+    int *arr2 = new int[] {0,0,1,1};
+
+    subVolumeArrays(&arr1, &arrlen, arr2, 4);
+
+    EXPECT_EQ(arrlen, 4);
+
+    EXPECT_EQ(arr1[0], 0);
+    EXPECT_EQ(arr1[1], 1);
+    EXPECT_EQ(arr1[2], 0);
+    EXPECT_EQ(arr1[3], 0);
+}
+
+TEST(VolumeRangeTest, subBasicVolArraySizeDif) {
+    int arrlen = 6;
+    int *arr1 = new int[] {0,1,1,0,0,1};
+    int *arr2 = new int[] {0,0,1,1};
+
+    subVolumeArrays(&arr1, &arrlen, arr2, 4);
+
+    EXPECT_EQ(arrlen, 6);
+
+    EXPECT_EQ(arr1[0], 0);
+    EXPECT_EQ(arr1[1], 1);
+    EXPECT_EQ(arr1[2], 0);
+    EXPECT_EQ(arr1[3], 0);
+    EXPECT_EQ(arr1[4], 0);
+    EXPECT_EQ(arr1[5], 1);
+}
+
+TEST(VolumeRangeTest, subBasicVolArraySizeDifSwap) {
+    int arrlen = 4;
+    int *arr2 = new int[] {0,0,1,1};
+    int *arr1 = new int[] {0,1,1,0,0,1};
+
+    subVolumeArrays(&arr2, &arrlen, arr1, 6);
+
+    EXPECT_EQ(arrlen, 6);
+
+    EXPECT_EQ(arr2[0], 0);
+    EXPECT_EQ(arr2[1], 0);
+    EXPECT_EQ(arr2[2], 0);
+    EXPECT_EQ(arr2[3], 1);
+    EXPECT_EQ(arr2[4], 0);
+    EXPECT_EQ(arr2[5], 0);
+}

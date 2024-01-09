@@ -14,3 +14,4 @@ int *volumeRangeToArray(int *arrlen, char* volRange);
 char *volumeArrayToRange(int arrlen, int *volumesArray);
 
 void addVolumeArrays(int **volumesArray, int *arrLen, int *opperandArray, int opperandLen);
+void subVolumeArrays(int **volumesArray, int *arrLen, int *opperandArray, int opperandLen);

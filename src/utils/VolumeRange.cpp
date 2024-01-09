@@ -144,3 +144,26 @@ void addVolumeArrays(int **volumesArray, int *arrLen, int *opperandArray, int op
     *volumesArray = accumulator;
     *arrLen = size;
 }
+
+void subVolumeArrays(int **volumesArray, int *arrLen, int *opperandArray, int opperandLen) {
+
+    int size = max(*arrLen, opperandLen);
+
+    int *accumulator = new int[size];
+    memset(accumulator, 0, size*sizeof(int));
+
+    for (int i = 0; i < *arrLen; i++) {
+        if ((*volumesArray)[i] == 1) {
+            accumulator[i] = 1;
+        }
+    }
+    for (int i = 0; i < opperandLen; i++) {
+        if (opperandArray[i] == 1) {
+            accumulator[i] = 0;
+        }
+    }
+
+    free(*volumesArray);
+    *volumesArray = accumulator;
+    *arrLen = size;
+}
