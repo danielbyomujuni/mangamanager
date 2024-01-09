@@ -12,3 +12,5 @@ int max(int current, int i);
 
 int *volumeRangeToArray(int *arrlen, char* volRange);
 char *volumeArrayToRange(int arrlen, int *volumesArray);
+
+void addVolumeArrays(int **volumesArray, int *arrLen, int *opperandArray, int opperandLen);
