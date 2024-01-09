@@ -8,7 +8,7 @@ set(CMAKE_CXX_FLAGS "-lcurl")
 
 add_executable(mangamanager src/main.cpp src/commands/SetCommand.cpp src/commands/SetCommand.h src/commands/BaseCommand.cpp src/commands/BaseCommand.h src/CommandManager.cpp src/CommandManager.h src/utils/CSVGateway.cpp src/utils/CSVGateway.h src/utils/MangaUpdatesGateway.cpp src/utils/MangaUpdatesGateway.h src/utils/Memory.cpp src/utils/Memory.h src/commands/LatestCommand.cpp src/commands/LatestCommand.h
         src/commands/HelpCommand.cpp
-        src/commands/HelpCommand.h src/utils/VolumeRange.h)
+        src/commands/HelpCommand.h src/utils/VolumeRange.h src/utils/VolumeRange.cpp)
 target_link_libraries(mangamanager PRIVATE nlohmann_json::nlohmann_json)
 install(TARGETS mangamanager DESTINATION bin)
 
@@ -27,7 +27,7 @@ if (CMAKE_BUILD_TYPE)
         src/commands/SetCommand.cpp src/commands/SetCommand.h src/commands/BaseCommand.cpp src/commands/BaseCommand.h src/CommandManager.cpp src/CommandManager.h src/utils/CSVGateway.cpp src/utils/CSVGateway.h src/utils/MangaUpdatesGateway.cpp src/utils/MangaUpdatesGateway.h src/utils/Memory.cpp src/utils/Memory.h src/commands/LatestCommand.cpp src/commands/LatestCommand.h
         test/utils/CSVGatewayTest.cpp test/utils/cleanup.cpp test/utils/cleanup.h
                 src/commands/HelpCommand.cpp
-                src/commands/HelpCommand.h src/utils/VolumeRange.h test/utils/VolumeRangeTest.cpp)
+                src/commands/HelpCommand.h src/utils/VolumeRange.h test/utils/VolumeRangeTest.cpp src/utils/VolumeRange.cpp)
         target_link_libraries(MangaUpdatesTest GTest::gtest_main nlohmann_json::nlohmann_json)
 
         include(GoogleTest)
