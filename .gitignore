@@ -8,5 +8,6 @@
 !/pkg/PKGBUILD
 !/.gitignore
 !/README.md
+!/test/workingDir
 /test/workingDir/*
 /.idea
