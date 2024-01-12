@@ -10,6 +10,7 @@
 
 class Config {
 private:
+    char *collectionFile;
     char *configPath;
     char *getKey(char* key);
 
@@ -17,6 +18,7 @@ public:
     Config(char *configPath);
 
     char *getCollectionFile();
+    void reload();
 };
 
 
