@@ -6,6 +6,8 @@
 #include <vector>
 #include <sstream>
 #include <cstring>
+#include <algorithm>
+#include <string>
 #include "Config.h"
 
 Config::Config(char *configPath) {

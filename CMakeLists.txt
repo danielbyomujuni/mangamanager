@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 find_package(nlohmann_json 3.2.0 REQUIRED)
 set(CMAKE_CXX_FLAGS "-lcurl")
 
-add_executable(mangamanager src/main.cpp src/commands/SetCommand.cpp src/commands/SetCommand.h src/commands/BaseCommand.cpp src/commands/BaseCommand.h src/CommandManager.cpp src/CommandManager.h src/utils/CSVGateway.cpp src/utils/CSVGateway.h src/utils/MangaUpdatesGateway.cpp src/utils/MangaUpdatesGateway.h src/utils/Memory.cpp src/utils/Memory.h src/commands/LatestCommand.cpp src/commands/LatestCommand.h
+add_executable(mangamanager src/main.cpp src/commands/AddCommand.cpp src/commands/AddCommand.h src/commands/BaseCommand.cpp src/commands/BaseCommand.h src/CommandManager.cpp src/CommandManager.h src/utils/CSVGateway.cpp src/utils/CSVGateway.h src/utils/MangaUpdatesGateway.cpp src/utils/MangaUpdatesGateway.h src/utils/Memory.cpp src/utils/Memory.h src/commands/LatestCommand.cpp src/commands/LatestCommand.h
         src/commands/HelpCommand.cpp
         src/commands/HelpCommand.h src/utils/VolumeRange.h src/utils/VolumeRange.cpp src/utils/Config.cpp src/utils/Config.h)
 target_link_libraries(mangamanager PRIVATE nlohmann_json::nlohmann_json)
@@ -24,7 +24,7 @@ if (CMAKE_BUILD_TYPE)
         add_executable(
         MangaUpdatesTest
         test/utils/MangaUpdatesGatewayTest.cpp
-        src/commands/SetCommand.cpp src/commands/SetCommand.h src/commands/BaseCommand.cpp src/commands/BaseCommand.h src/CommandManager.cpp src/CommandManager.h src/utils/CSVGateway.cpp src/utils/CSVGateway.h src/utils/MangaUpdatesGateway.cpp src/utils/MangaUpdatesGateway.h src/utils/Memory.cpp src/utils/Memory.h src/commands/LatestCommand.cpp src/commands/LatestCommand.h
+                src/commands/AddCommand.cpp src/commands/AddCommand.h src/commands/BaseCommand.cpp src/commands/BaseCommand.h src/CommandManager.cpp src/CommandManager.h src/utils/CSVGateway.cpp src/utils/CSVGateway.h src/utils/MangaUpdatesGateway.cpp src/utils/MangaUpdatesGateway.h src/utils/Memory.cpp src/utils/Memory.h src/commands/LatestCommand.cpp src/commands/LatestCommand.h
         test/utils/CSVGatewayTest.cpp test/utils/cleanup.cpp test/utils/cleanup.h
                 src/commands/HelpCommand.cpp
                 src/commands/HelpCommand.h src/utils/VolumeRange.h test/utils/VolumeRangeTest.cpp src/utils/VolumeRange.cpp test/CommandManagerTest.cpp src/utils/Config.cpp src/utils/Config.h test/utils/ConfigTest.cpp)

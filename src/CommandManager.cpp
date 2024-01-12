@@ -9,7 +9,7 @@
 #include "commands/HelpCommand.h"
 
 void CommandManager::registerCommands() {
-    new SetCommand;
+    new AddCommand;
     new LatestCommand;
     new HelpCommand;
 }
