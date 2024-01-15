@@ -5,7 +5,7 @@
 #include "HelpCommand.h"
 #include "../../CommandManager.h"
 
-void HelpCommand::execute(std::vector<std::string> args) {
+int HelpCommand::execute(std::vector<std::string> args) {
     printf("mangamanager [OPTION] COMMAND [ARGUMENTS]\n\n");
     printf("\e[1mManage your manga collection from the terminal\e[0m\n\n");
 
@@ -27,6 +27,7 @@ void HelpCommand::execute(std::vector<std::string> args) {
     printf("\e[1m\e[4mFLAGS:\e[0m\n");
     printf("  %-34s %-60s\n", "--help, -h", "Lists all available commands");
     printf("  %-34s %-60s\n", "-j", "Outputs the Result as JSON");
+    return 0;
 }
 
 HelpCommand::HelpCommand() {

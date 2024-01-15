@@ -11,7 +11,7 @@
 class CreateCollectionCommand: public BaseCommand {
 public:
     CreateCollectionCommand();
-    void execute(std::vector<std::string> args);
+    int execute(std::vector<std::string> args);
 };
 
 

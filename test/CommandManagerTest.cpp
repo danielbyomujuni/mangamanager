@@ -5,7 +5,14 @@
 #include "../src/CommandManager.h"
 
 
-TEST(CommandManagerTest, testCollection) {
+TEST(CommandManagerTest, testCreateCollectionNoArgs) {
     CommandManager::instance()->registerCommands();
-    CommandManager::instance()->runCommand("collection", {});
+    int status = CommandManager::instance()->runCommand("create-collection", {});
+    EXPECT_EQ(status, 1);
+}
+
+TEST(CommandManagerTest, testCreateCollectionArgs) {
+    CommandManager::instance()->registerCommands();
+    int status = CommandManager::instance()->runCommand("create-collection", {"test"});
+    EXPECT_EQ(status, 0);
 }

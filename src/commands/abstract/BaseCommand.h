@@ -12,7 +12,7 @@
 class BaseCommand {
 public:
     void incorrectUsage(std::string usage);
-    virtual void execute(std::vector<std::string> args)  { std::cout << "unimplemented\n"; }
+    virtual int execute(std::vector<std::string> args)  { std::cout << "unimplemented\n"; }
 };
 
 

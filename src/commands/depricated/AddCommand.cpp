@@ -13,21 +13,22 @@ AddCommand::AddCommand() {
     CommandManager::instance()->addCommand("add", this);
 }
 
-void AddCommand::execute(std::vector<std::string> args) {
+int AddCommand::execute(std::vector<std::string> args) {
     if (args.size() == 0) {
         this->incorrectUsage("add OPERATION [ARGUMENTS]");
-        return;
+        return 1;
     }
     if (args.at(0) == "series") {
         this->mangaCMD(args.at(1));
-        return;
+        return 0;
     }
 
     if (args.at(0) == "volumes") {
         //std::cout << args.at(1) << std::endl;
         this->volumesCMD(args.at(1), args.at(2));
-        return;
+        return 0;
     }
+    return 0;
 }
 
 void AddCommand::mangaCMD(std::string seriesName) {

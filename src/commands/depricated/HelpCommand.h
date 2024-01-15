@@ -11,7 +11,7 @@
 class HelpCommand: public BaseCommand  {
 public:
     HelpCommand();
-    void execute(std::vector<std::string> args);
+    int execute(std::vector<std::string> args);
 };
 
 

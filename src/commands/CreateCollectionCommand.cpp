@@ -9,11 +9,12 @@ CreateCollectionCommand::CreateCollectionCommand() {
     CommandManager::instance()->addCommand("create-collection", this);
 }
 
-void CreateCollectionCommand::execute(std::vector<std::string> args) {
+int CreateCollectionCommand::execute(std::vector<std::string> args) {
     if (args.size() != 1) {
         //FAIL
-        return;
+        return 1;
     }
     //create collection file.
     //Success
+    return 0;
 }

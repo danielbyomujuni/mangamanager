@@ -2,13 +2,13 @@
 // Created by Daniel Byomujuni on 10/8/23.
 //
 
-#include <string>
 #include <vector>
 #include "CommandManager.h"
-#include "commands/depricated/LatestCommand.h"
-#include "commands/depricated/HelpCommand.h"
+#include "commands/CreateCollectionCommand.h"
 
 void CommandManager::registerCommands() {
+    new CreateCollectionCommand;
+
     //new AddCommand;
     //new LatestCommand;
     //new HelpCommand;

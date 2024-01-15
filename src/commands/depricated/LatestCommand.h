@@ -13,7 +13,7 @@ class LatestCommand: public BaseCommand {
 
 public:
     LatestCommand();
-    void execute(std::vector<std::string> args);
+    int execute(std::vector<std::string> args);
 };
 
 

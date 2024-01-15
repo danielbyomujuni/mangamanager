@@ -16,7 +16,7 @@ LatestCommand::LatestCommand() {
     CommandManager::instance()->addCommand("collection", this);
 }
 
-void LatestCommand::execute(std::vector<std::string> args) {
+int LatestCommand::execute(std::vector<std::string> args) {
     CSVGateway csv;
     //MangaUpdatesGateway gate;
     std::vector<Manga> mangas = csv.allRecords();
@@ -51,6 +51,6 @@ void LatestCommand::execute(std::vector<std::string> args) {
         printf("| %-13d\n", mg.volumes);
         //std::cout << DEFAULT;
     }
-
+    return 0;
 }
 

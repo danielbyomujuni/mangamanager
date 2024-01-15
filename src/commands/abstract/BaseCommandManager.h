@@ -13,9 +13,9 @@
 class BaseCommandManager {
     std::map<std::string, BaseCommand* > commands;
 public:
-    virtual void registerCommands();
+    virtual void registerCommands() { std::cout << "unimplemented\n"; }
     void addCommand(std::string alias, BaseCommand *cmd);
-    void runCommand(std::string cmd, std::vector<std::string> args);
+    int runCommand(std::string cmd, std::vector<std::string> args);
 };
 
 
