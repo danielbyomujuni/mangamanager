@@ -7,7 +7,7 @@
 
 
 #include <vector>
-#include "BaseCommand.h"
+#include "../abstract/BaseCommand.h"
 
 class LatestCommand: public BaseCommand {
 

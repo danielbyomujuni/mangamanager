@@ -4,8 +4,8 @@
 #include <vector>
 #include <iostream>
 #include "AddCommand.h"
-#include "../CommandManager.h"
-#include "../utils/CSVGateway.h"
+#include "../../CommandManager.h"
+#include "../../utils/CSVGateway.h"
 
 #define documents getenv("HOME") + "/Documents/"
 

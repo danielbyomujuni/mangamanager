@@ -3,7 +3,7 @@
 //
 
 #include "HelpCommand.h"
-#include "../CommandManager.h"
+#include "../../CommandManager.h"
 
 void HelpCommand::execute(std::vector<std::string> args) {
     printf("mangamanager [OPTION] COMMAND [ARGUMENTS]\n\n");

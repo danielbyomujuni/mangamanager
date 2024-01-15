@@ -21,8 +21,8 @@ int main(int argc, char *argv[]) {
         argz.push_back(argv[i]);
     }
 
-    CommandManager::instance()->registerCommands();
-    CommandManager::instance()->runCommand(command, argz);
+    //CommandManager::instance()->registerCommands();
+    //CommandManager::instance()->runCommand(command, argz);
 
 
     //CommandManager::instance()->runCommand("set", {"manga", "SHY", "12137220691"});

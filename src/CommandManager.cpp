@@ -5,26 +5,13 @@
 #include <string>
 #include <vector>
 #include "CommandManager.h"
-#include "commands/LatestCommand.h"
-#include "commands/HelpCommand.h"
+#include "commands/depricated/LatestCommand.h"
+#include "commands/depricated/HelpCommand.h"
 
 void CommandManager::registerCommands() {
-    new AddCommand;
-    new LatestCommand;
-    new HelpCommand;
-}
-
-void CommandManager::addCommand(std::string alias, BaseCommand *cmd) {
-    CommandManager::commands.insert({alias, cmd});
-}
-
-void CommandManager::runCommand(std::string cmd, std::vector<std::string> args) {
-    if (CommandManager::commands[cmd] == NULL) {
-        printf("mangamanager: unknown command: %s\n", cmd.c_str());
-        printf("Try 'mangamanager --help' for more information\n");
-        exit(0);
-    }
-    CommandManager::commands[cmd]->execute(args);
+    //new AddCommand;
+    //new LatestCommand;
+    //new HelpCommand;
 }
 
 CommandManager* CommandManager::instance() {

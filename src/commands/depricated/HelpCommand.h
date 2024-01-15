@@ -6,7 +6,7 @@
 #define MANGAMANAGER_HELPCOMMAND_H
 
 
-#include "BaseCommand.h"
+#include "../abstract/BaseCommand.h"
 
 class HelpCommand: public BaseCommand  {
 public:

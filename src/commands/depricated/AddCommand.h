@@ -7,7 +7,7 @@
 
 
 #include <string>
-#include "BaseCommand.h"
+#include "../abstract/BaseCommand.h"
 
 class AddCommand: public BaseCommand {
 private:

@@ -4,9 +4,9 @@
 #include <vector>
 #include <iostream>
 #include "LatestCommand.h"
-#include "../CommandManager.h"
-#include "../utils/CSVGateway.h"
-#include "../utils/MangaUpdatesGateway.h"
+#include "../../CommandManager.h"
+#include "../../utils/CSVGateway.h"
+#include "../../utils/MangaUpdatesGateway.h"
 
 #define NOT_UP_TO_DATE "\033[91m"
 #define UP_TO_DATE "\033[92m"

@@ -7,19 +7,17 @@
 
 
 #include <map>
-#include "commands/BaseCommand.h"
-#include "commands/AddCommand.h"
+#include "commands/abstract/BaseCommand.h"
+#include "commands/depricated/AddCommand.h"
+#include "commands/abstract/BaseCommandManager.h"
 
-class CommandManager {
+class CommandManager: public BaseCommandManager {
 private:
-    std::map<std::string, BaseCommand* > commands;
     inline static CommandManager* inst = NULL;
 
 public:
     static CommandManager* instance();
     void registerCommands();
-    void addCommand(std::string alias, BaseCommand *cmd);
-    void runCommand(std::string cmd, std::vector<std::string> args);
 };
 
 
